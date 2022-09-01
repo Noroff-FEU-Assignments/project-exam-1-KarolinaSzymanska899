@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Pacifico&display=swap");
+
+/*
+CSS rules to specify families
+
+font-family: 'Caveat Brush', cursive;
+font-family: 'Pacifico', cursive;
+*/
+
+:root {
+  --text-primary: #014f4e;
+  --text-headings: #016866;
+  --turquise: #04bfad;
+  --green-light: #bfe3bb;
+  --beige: #f2f2f2;
+  --coral: #f29bb2;
+}
