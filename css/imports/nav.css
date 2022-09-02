@@ -2,14 +2,23 @@
   left: 0;
 }
 
+#nav {
+  background: var(--text-primary);
+}
+
+#nav .nav-item a {
+  text-decoration: none;
+  color: var(--green-light);
+}
+
 @media only screen and (max-width: 768px) {
   #nav {
-    background: var(--text-primary);
     width: 300px;
     height: 100vh;
     position: relative;
     left: -300px;
     transition: 0.4s;
+    z-index: 2;
   }
 
   #nav .nav-item {
@@ -18,15 +27,13 @@
   }
 
   #nav .nav-item a {
-    color: var(--green-light);
-    text-decoration: none;
     position: relative;
     top: 10rem;
     left: 2rem;
   }
 
   img.toggle-btn {
-    width: 40px;
+    width: 2rem;
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -34,6 +41,20 @@
 }
 
 @media only screen and (min-width: 769px) {
+  #nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  #nav .nav-item a {
+    margin: 0 3rem;
+  }
+
+  #nav ul li.nav-item {
+    list-style: none;
+  }
+
   img.toggle-btn {
     display: none;
   }
