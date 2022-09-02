@@ -6,5 +6,3 @@ import { toggleNav } from "./nav.js";
 createNav();
 createHeader();
 createFooter();
-
-toggleBtn.addEventListener("onclick", toggleNav);
