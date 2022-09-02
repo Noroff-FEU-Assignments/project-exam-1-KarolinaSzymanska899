@@ -1,0 +1,37 @@
+@media only screen and (max-width: 768px) {
+  #nav {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: var(--text-primary);
+    left: -300px;
+    transition: 0.4s;
+  }
+
+  #nav.active {
+    left: 0;
+  }
+
+  #nav .nav-item {
+    color: var(--green-light);
+    font-size: 20px;
+    padding: 20px 24px;
+  }
+
+  #nav .nav-item a {
+    color: var(--green-light);
+    text-decoration: none;
+  }
+
+  #nav .toggle-btn {
+    position: absolute;
+    top: 30px;
+    left: 330px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  img.toggle-btn {
+    display: none;
+  }
+}
