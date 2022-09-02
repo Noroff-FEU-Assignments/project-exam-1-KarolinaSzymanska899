@@ -11,8 +11,10 @@ export function createNav() {
                   </ul>`;
 }
 
+/*
 export function toggleNav() {
+  const nav = document.querySelector("#nav");
   const toggleBtn = document.querySelector("#toggle-btn");
-  nav.classList.toggle("active");
-  toggleBtn.addEventListener("onclick", toggleNav);
+  nav.classList.toggle("show-nav");
 }
+*/
