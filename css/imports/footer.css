@@ -1,0 +1,34 @@
+#footer {
+  background-color: var(--beige);
+}
+
+#footer,
+.footer-text,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text,
+.footer-social {
+  margin: 1rem;
+}
+
+#footer div.footer-text {
+  text-align: center;
+}
+
+#footer div.footer-social {
+  font-family: "Caveat Brush", cursive;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+#footer .footer-social .social-icons img {
+  width: 30px;
+  margin: 0.5rem;
+}

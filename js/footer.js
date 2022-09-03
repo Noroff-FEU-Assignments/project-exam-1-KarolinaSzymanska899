@@ -6,9 +6,9 @@ export function createFooter() {
                         <p>All rights reserved</p>
                         <p>Copying and distribution without the consent of heidicooks.com is prohibited</p>
                       </div>
-                      <div>
+                      <div class="footer-social">
                         <p>STAY UPDATED</p>
-                        <div class="footer-social">
+                        <div class="social-icons">
                           <a href="#"><img src="../images/facebook.png" /></a>
                           <a href="#"><img src="../images/instagram.png" /></a>
                           <a href="#"><img src="../images/pinterest.png" /></a>

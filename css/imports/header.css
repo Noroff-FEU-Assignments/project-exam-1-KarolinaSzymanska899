@@ -1,0 +1,13 @@
+#header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#header a {
+  text-decoration: none;
+  margin: 2rem;
+  padding: 0.8rem;
+  background: var(--green-light);
+  color: var(--text-primary);
+}
