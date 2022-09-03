@@ -1,0 +1,33 @@
+.hide-me {
+  display: none;
+}
+
+#sidebar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#sidebar a {
+  text-decoration: none;
+  margin: 1rem 0.5rem 0.5rem 0;
+  padding: 0.8rem;
+  background: var(--beige);
+  color: var(--text-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .hide-me {
+    display: block;
+    font-family: "Pacifico", cursive;
+    text-decoration: underline;
+  }
+
+  #sidebar {
+    flex-direction: column;
+  }
+
+  #sidebar a {
+    background: none;
+  }
+}
