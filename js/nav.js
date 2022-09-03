@@ -15,7 +15,7 @@ export function toggleNav() {
   const nav = document.querySelector("#nav");
   const toggleBtn = document.querySelector("#toggle-btn");
 
-  nav.classList.toggle(".show-nav");
+  nav.classList.toggle("show-nav");
 
   toggleBtn.addEventListener("onclick", toggleNav);
 }
