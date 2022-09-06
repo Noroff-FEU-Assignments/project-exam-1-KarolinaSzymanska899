@@ -1,7 +1,7 @@
 export function createNav() {
   const nav = document.querySelector("#nav");
 
-  nav.innerHTML = `<img id="toggle-btn" class="toggle-btn" src="../images/cheeseburger.png" />
+  nav.innerHTML = `<img id="toggle-btn" class="toggle-btn icon" src="../images/cheeseburger.png" />
                   <ul>
                     <li class="nav-item"><a href="index.html">HOME</a></li>
                     <li class="nav-item"><a href="posts.html">RECIPES</a></li>
