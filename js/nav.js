@@ -7,7 +7,7 @@ export function createNav() {
                     <li class="nav-item"><a href="posts.html">RECIPES</a></li>
                     <li class="nav-item"><a href="#">BLOG</a></li>
                     <li class="nav-item"><a href="about.html">ABOUT</a></li>
-                    <li class="nav-item"><a href="contact.html">COLLABORATION</a></li>
+                    <li class="nav-item"><a href="contact.html">CONTACT</a></li>
                   </ul>`;
 }
 

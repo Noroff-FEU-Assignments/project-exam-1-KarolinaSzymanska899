@@ -8,6 +8,59 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 18px;
   font-family: "Lato", sans-serif;
+  color: var(--text-primary);
+}
+
+/* EDIT THIS: */
+
+img {
+  width: 150px;
+}
+
+.icon {
+  width: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1024px) {
+  #header {
+    grid-area: header;
+  }
+
+  #nav {
+    grid-area: nav;
+  }
+
+  #sidebar {
+    grid-area: sidebar;
+  }
+
+  #main {
+    grid-area: main;
+  }
+
+  #footer {
+    grid-area: footer;
+  }
+
+  .body {
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "sidebar main main main"
+      "footer footer footer footer";
+  }
 }

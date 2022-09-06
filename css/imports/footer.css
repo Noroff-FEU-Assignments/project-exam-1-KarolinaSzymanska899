@@ -1,34 +1,46 @@
-#footer {
-  background-color: var(--beige);
-}
-
-#footer,
-.footer-text,
-.footer-social {
+.footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background: var(--text-primary);
+  padding: 2rem 0;
 }
 
-.footer-text,
-.footer-social {
-  margin: 1rem;
+.footer div.footer-text,
+.footer div.footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
 }
 
-#footer div.footer-text {
+.footer div.footer-text p,
+.footer div.footer-social p {
+  color: var(--green-light);
+  margin-bottom: 0.3rem;
   text-align: center;
 }
 
-#footer div.footer-social {
+.footer div.footer-social {
   font-family: "Caveat Brush", cursive;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
-.social-icons {
-  display: flex;
-  flex-direction: row;
-}
-
-#footer .footer-social .social-icons img {
-  width: 30px;
+.footer div.footer-social div.social-icons a img.icon {
   margin: 0.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer div.footer-social {
+    font-family: "Caveat Brush", cursive;
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+
+  .footer div.footer-social div.social-icons a img.icon {
+    width: 80px;
+  }
 }

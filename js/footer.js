@@ -9,10 +9,10 @@ export function createFooter() {
                       <div class="footer-social">
                         <p>STAY UPDATED</p>
                         <div class="social-icons">
-                          <a href="#"><img src="../images/facebook.png" /></a>
-                          <a href="#"><img src="../images/instagram.png" /></a>
-                          <a href="#"><img src="../images/pinterest.png" /></a>
-                          <a href="#"><img src="../images/twitter.png" /></a>
+                          <a href="#"><img src="../images/facebook.png" class="icon" /></a>
+                          <a href="#"><img src="../images/instagram.png" class="icon" /></a>
+                          <a href="#"><img src="../images/pinterest.png" class="icon" /></a>
+                          <a href="#"><img src="../images/twitter.png" class="icon" /></a>
                         </div>
                       </div>`;
 }
