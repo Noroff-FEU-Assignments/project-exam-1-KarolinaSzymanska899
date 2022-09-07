@@ -2,6 +2,25 @@
   display: none;
 }
 
-h2 {
+h1,
+h2,
+h3 {
   font-family: "Pacifico", cursive;
+}
+
+.message {
+  border: 1px solid grey;
+  color: grey;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.message.error {
+  border-color: red;
+  color: red;
+}
+
+.message.success {
+  border-color: green;
+  color: green;
 }
