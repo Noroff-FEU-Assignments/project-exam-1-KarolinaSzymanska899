@@ -1,3 +1,43 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 2rem;
+  border: var(--text-primary) 1px solid;
+}
+
 .form-error {
   display: none;
+}
+
+input.input,
+textarea {
+  color: var(--text-primary);
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+label {
+  font-size: 14px;
+}
+
+label,
+textarea {
+  display: block;
+  margin-top: 1rem;
+}
+
+.form-error {
+  display: none;
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 3px;
 }
