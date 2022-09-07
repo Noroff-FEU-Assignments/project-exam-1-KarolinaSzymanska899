@@ -77,5 +77,6 @@ function submitForm(event) {
   }
 }
 
+// event listeners
 form.addEventListener("submit", validateForm);
 form.addEventListener("submit", submitForm);
