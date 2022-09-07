@@ -8,8 +8,8 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
-const message = document.querySelector("#message");
-const messageError = document.querySelector("#messageError");
+const messageForm = document.querySelector("#message");
+const messageFormError = document.querySelector("#messageError");
 
 // checks length
 function checkLength(value, len) {
@@ -25,4 +25,39 @@ function checkEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
+}
+
+// form validation function
+function validateForm() {
+  event.preventDefault();
+
+  try {
+    if (checkLength(name.value, 5)) {
+      nameError.style.display = "none";
+    } else {
+      nameError.style.display = "block";
+    }
+
+    if (checkLength(subject.value, 15)) {
+      subjectError.style.display = "none";
+    } else {
+      subjectError.style.display = "block";
+    }
+
+    if (checkLength(messageForm.value, 25)) {
+      messageFormError.style.display = "none";
+    } else {
+      messageFormError.style.display = "block";
+    }
+
+    if (checkEmail(email.value)) {
+      emailFormError.style.display = "none";
+    } else {
+      emailFormError.style.display = "block";
+    }
+
+    console.log("The form has been sumbitted");
+  } catch (error) {
+    console.log(error);
+  }
 }
