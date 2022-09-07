@@ -1,6 +1,7 @@
 import { displayMessage } from "./ui/displayMessage.js";
 
 // variables
+const sentFormMessage = document.querySelector("#sent-form-message");
 const form = document.querySelector("#contactForm");
 const name = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
@@ -28,7 +29,7 @@ function checkEmail(email) {
 }
 
 // form validation function
-function validateForm() {
+function validateForm(event) {
   event.preventDefault();
 
   try {
@@ -51,13 +52,31 @@ function validateForm() {
     }
 
     if (checkEmail(email.value)) {
-      emailFormError.style.display = "none";
+      emailError.style.display = "none";
     } else {
-      emailFormError.style.display = "block";
+      emailError.style.display = "block";
     }
-
-    console.log("The form has been sumbitted");
   } catch (error) {
     console.log(error);
+    displayMessage("error", "An error occurred", sentFormMessage);
   }
 }
+
+form.addEventListener("submit", validateForm);
+
+// form submission function
+function submitForm(event) {
+  event.preventDefault();
+
+  if (
+    checkLength(name.value, 5) &&
+    checkLength(subject.value, 15) &&
+    checkLength(messageForm.value, 25) &&
+    checkEmail(email.value)
+  ) {
+    displayMessage("success", success, "#sent-form-message");
+    form.reset();
+  }
+}
+
+form.addEventListener("submit", submitForm);
