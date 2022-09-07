@@ -4,15 +4,15 @@
   box-sizing: border-box;
 }
 
-html {
+/*html {
   scroll-behavior: smooth;
-}
+}*/
 
 .body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Lato", sans-serif;
   color: var(--text-primary);
 }
@@ -51,8 +51,8 @@ img {
   }
 
   .body {
-    font-size: 25px;
-    letter-spacing: 1.5px;
+    font-size: 16px;
+    letter-spacing: 1px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -66,10 +66,6 @@ img {
 
   .sidebar,
   .main {
-    margin: 6rem 0;
-  }
-
-  .sidebar {
-    margin-left: 20%;
+    margin: 4rem 0;
   }
 }

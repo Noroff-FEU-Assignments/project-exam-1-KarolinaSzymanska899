@@ -1,8 +1,8 @@
-#sidebar {
+.sidebar {
   padding: 2rem 0;
 }
 
-#sidebar a.logo {
+.sidebar a.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,44 +12,44 @@ img.logo-img {
   width: 40%;
 }
 
-#sidebar a.logo h2.logo-text {
+.sidebar a.logo h2.logo-text {
   font-family: "Caveat Brush", cursive;
-  font-size: 25px;
+  font-size: 20px;
   color: var(--text-primary);
-  text-decoration: none;
 }
 
-#sidebar div.search {
+.sidebar div.search {
   display: flex;
   justify-content: center;
   margin: 2rem 0;
 }
 
 .sidebar div.search button.search-button {
-  padding: 0 2rem;
-  font-size: 1.5rem;
+  padding: 0 1.5rem;
+  font-size: 16px;
   font-family: "Lato", sans-serif;
   color: var(--text-primary);
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
-#sidebar div.categories {
+.sidebar div.categories {
   display: flex;
   justify-content: center;
 }
 
-#sidebar div.categories div.categories-self {
+.sidebar div.categories div.categories-self {
   display: flex;
   flex-direction: column;
 }
 
-#sidebar div.categories div.categories-self h3.heading-categories {
+.sidebar div.categories div.categories-self h3.heading-categories {
+  font-size: 20px;
   font-family: "Pacifico", cursive;
   text-decoration: underline;
 }
 
-#sidebar div.categories div.categories-self a {
+.sidebar div.categories div.categories-self a {
   text-decoration: none;
   color: var(--text-primary);
   padding-top: 1rem;
@@ -57,8 +57,22 @@ img.logo-img {
 }
 
 @media only screen and (min-width: 1024px) {
+  .sidebar {
+    margin-left: 6px;
+    padding: 0;
+  }
+
   input#search-input {
-    width: 60%;
-    height: 3rem;
+    width: 50%;
+  }
+  input#search-input,
+  .sidebar div.search button.search-button {
+    height: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sidebar {
+    margin-left: 1.5rem;
   }
 }
