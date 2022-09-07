@@ -62,8 +62,6 @@ function validateForm(event) {
   }
 }
 
-form.addEventListener("submit", validateForm);
-
 // form submission function
 function submitForm(event) {
   event.preventDefault();
@@ -79,4 +77,5 @@ function submitForm(event) {
   }
 }
 
+form.addEventListener("submit", validateForm);
 form.addEventListener("submit", submitForm);
