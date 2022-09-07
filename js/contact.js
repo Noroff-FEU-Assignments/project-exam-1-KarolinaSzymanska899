@@ -28,7 +28,7 @@ function checkEmail(email) {
   return patternMatches;
 }
 
-// form validation function
+// validates form
 function validateForm(event) {
   event.preventDefault();
 
