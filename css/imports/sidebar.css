@@ -25,6 +25,15 @@ img.logo-img {
   margin: 2rem 0;
 }
 
+.sidebar div.search button.search-button {
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+  color: var(--text-primary);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 #sidebar div.categories {
   display: flex;
   justify-content: center;
@@ -53,5 +62,3 @@ img.logo-img {
     height: 3rem;
   }
 }
-
-/* .sidebar div.search button.search-button */

@@ -63,4 +63,13 @@ img {
       "sidebar main main main"
       "footer footer footer footer";
   }
+
+  .sidebar,
+  .main {
+    margin: 6rem 0;
+  }
+
+  .sidebar {
+    margin-left: 20%;
+  }
 }
