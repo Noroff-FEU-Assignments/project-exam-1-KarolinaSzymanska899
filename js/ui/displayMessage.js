@@ -1,3 +1,4 @@
+// a universal function for displaying a message
 export function displayMessage(messageType, message, target) {
   const element = document.querySelector(target);
 
