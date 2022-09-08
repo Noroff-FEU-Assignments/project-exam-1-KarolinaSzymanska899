@@ -45,9 +45,9 @@ textarea {
   margin-top: 1rem;
 }
 
-.form button {
-  width: 20%;
+.form button.cta-button {
   align-self: center;
+  margin: 2rem 0;
 }
 
 .form-error {
@@ -55,10 +55,6 @@ textarea {
   font-size: 0.8rem;
   color: red;
   margin-top: 3px;
-}
-
-.form button.cta-button {
-  margin: 2rem 0;
 }
 
 @media only screen and (min-width: 768px) {
