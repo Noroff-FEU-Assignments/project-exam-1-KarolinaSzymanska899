@@ -12,7 +12,7 @@ h3 {
   border: 1px solid grey;
   color: grey;
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .message.error {
@@ -23,4 +23,17 @@ h3 {
 .message.success {
   border-color: green;
   color: green;
+  background: var(--beige);
+}
+
+.cta-button {
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  background: var(--text-primary);
+  color: var(--green-light);
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  font-family: "Lato", sans-serif;
 }
