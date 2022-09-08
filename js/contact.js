@@ -62,7 +62,7 @@ function validateForm(event) {
   }
 }
 
-// form submission function
+// submits form
 function submitForm(event) {
   event.preventDefault();
 
@@ -72,7 +72,11 @@ function submitForm(event) {
     checkLength(messageForm.value, 25) &&
     checkEmail(email.value)
   ) {
-    displayMessage("success", success, "#sent-form-message");
+    displayMessage(
+      "success",
+      "Your form has been submitted 👌👩🏼‍🍳 🍵",
+      "#sent-form-message"
+    );
     form.reset();
   }
 }
