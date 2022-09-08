@@ -11,6 +11,15 @@ export function createNav() {
                   </ul>`;
 }
 
+window.addEventListener("load", () => {
+  const toggleBtn = document.querySelector("#toggle-btn");
+
+  toggleBtn.addEventListener("click", (e) => {
+    const nav = document.querySelector("#nav");
+    nav.classList.toggle("show-nav");
+  });
+});
+
 export function toggleNav() {
   const nav = document.querySelector("#nav");
   const toggleBtn = document.querySelector("#toggle-btn");
