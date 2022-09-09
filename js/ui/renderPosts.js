@@ -5,7 +5,7 @@ export function renderPosts(postsToRender) {
   postsToRender.forEach(function (post) {
     postsContainer.innerHTML += `<a href="details.html?id=${post.id}">
                                   <figure class="post-card">
-                                    <img class="post-img" src="${post.featured_media}" alt="${post.title.rendered}" />
+                                    <img class="post-img" src="${post._embedded}" alt="${post.title.rendered}" />
                                     <figcaption>${post.title.rendered}</figcaption>
                                   </figure>
                                 </a>`;

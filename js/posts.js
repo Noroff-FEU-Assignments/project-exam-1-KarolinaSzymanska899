@@ -3,7 +3,7 @@ import { renderPosts } from "./ui/renderPosts.js";
 import { displayMessage } from "./ui/displayMessage.js";
 
 const url =
-  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?per_page=30";
+  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?_embed";
 
 async function getPosts() {
   try {
