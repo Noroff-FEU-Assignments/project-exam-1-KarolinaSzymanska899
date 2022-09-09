@@ -9,14 +9,13 @@ async function getPosts() {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results);
 
     renderPosts(results);
   } catch (error) {
     console.log(error);
     displayMessage(
       "error",
-      "Ops something went wrong. But we will solve the issue ASAP 🤓 💻",
+      "Ops something went wrong. We will solve the issue ASAP 👩🏼‍🍳 🍵",
       "#posts-container"
     );
   }

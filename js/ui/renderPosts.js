@@ -3,11 +3,16 @@ export function renderPosts(postsToRender) {
   postsContainer.innerHTML = "";
 
   postsToRender.forEach(function (post) {
-    postsContainer.innerHTML += `<a href="details.html?id=${post.id}">
-                                  <figure class="post-card">
-                                    <img class="post-img" src="${post._embedded}" alt="${post.title.rendered}" />
-                                    <figcaption>${post.title.rendered}</figcaption>
-                                  </figure>
+    postsContainer.innerHTML += `<a class="post-card" href="details.html?id=${post.id}">
+                                  ${post.content.rendered}
+                                  <div>${post.title.rendered}</div>
                                 </a>`;
   });
 }
+
+/*
+<figure class="post-card">
+  <img class="post-img" src="${post._embedded["wp:featuredmedia"].source_url}" alt="${post.title.rendered}" />
+   <figcaption>${post.title.rendered}</figcaption>
+</figure>
+*/

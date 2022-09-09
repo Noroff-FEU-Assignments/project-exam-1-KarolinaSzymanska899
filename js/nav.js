@@ -19,12 +19,3 @@ window.addEventListener("load", () => {
     nav.classList.toggle("show-nav");
   });
 });
-
-export function toggleNav() {
-  const nav = document.querySelector("#nav");
-  const toggleBtn = document.querySelector("#toggle-btn");
-
-  nav.classList.toggle("show-nav");
-
-  toggleBtn.addEventListener("onclick", toggleNav);
-}
