@@ -3,7 +3,7 @@
 }
 
 .body {
-  overflow: scroll;
+  overflow-y: scroll;
   /*max-height: ;*/
 }
 
@@ -48,6 +48,7 @@ img.toggle-btn {
   .nav {
     width: 100%;
     height: auto;
+    left: 0;
   }
 
   .nav ul {
