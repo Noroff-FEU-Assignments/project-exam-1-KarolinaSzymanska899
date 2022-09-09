@@ -1,0 +1,25 @@
+import { renderPosts } from "./ui/renderPosts.js";
+/*import { searchPosts } from "./ui/searchPosts.js";*/
+import { displayMessage } from "./ui/displayMessage.js";
+
+const url =
+  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?per_page=30";
+
+async function getPosts() {
+  try {
+    const response = await fetch(url);
+    const results = await response.json();
+    console.log(results);
+
+    renderPosts(results);
+  } catch (error) {
+    console.log(error);
+    displayMessage(
+      "error",
+      "Ops something went wrong. But we will solve the issue ASAP 🤓 💻",
+      "#posts-container"
+    );
+  }
+}
+
+getPosts();
