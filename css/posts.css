@@ -15,8 +15,6 @@ a.post-card {
 }
 
 h1 {
-  margin: 1.5rem 0;
-  font-size: 2rem;
   align-self: center;
 }
 
@@ -33,11 +31,6 @@ a.post-card {
 div.posts-container a.post-card figure img {
   width: 100%;
   height: auto;
-}
-
-img.loader {
-  width: 40%;
-  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 768px) {

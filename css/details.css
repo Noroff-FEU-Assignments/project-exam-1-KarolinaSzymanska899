@@ -1,5 +1,31 @@
-.main {
+.main,
+div.details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+div.details-container {
+  width: 80%;
+}
+
+div.details-container figure img {
+  width: 100%;
+  height: auto;
+}
+
+.main div.details-container p {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  div.details-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  div.details-container {
+    width: 50%;
+  }
 }
