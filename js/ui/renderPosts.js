@@ -9,10 +9,3 @@ export function renderPosts(postsToRender) {
                                 </a>`;
   });
 }
-
-/*
-<figure class="post-card">
-  <img class="post-img" src="${post._embedded["wp:featuredmedia"].source_url}" alt="${post.title.rendered}" />
-   <figcaption>${post.title.rendered}</figcaption>
-</figure>
-*/
