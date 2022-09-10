@@ -1,0 +1,19 @@
+.main,
+.main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main section {
+  width: 60%;
+}
+
+.main section h2,
+.main section img {
+  margin-bottom: 0.5rem;
+}
+
+.main section {
+  margin-bottom: 1rem;
+}

@@ -18,7 +18,7 @@ a.post-card {
   width: 80%;
   margin-bottom: 2.5rem;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Pacifico", cursive;
   text-align: center;
   color: var(--text-primary);
@@ -39,7 +39,7 @@ div.posts-container a.post-card figure img {
   div.posts-container {
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 
