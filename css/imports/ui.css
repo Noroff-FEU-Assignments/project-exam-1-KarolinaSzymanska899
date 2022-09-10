@@ -31,6 +31,10 @@ h1 {
   background: var(--beige);
 }
 
+a {
+  text-decoration: none;
+}
+
 .cta-button {
   border: none;
   border-radius: 25px;
@@ -42,6 +46,7 @@ h1 {
   letter-spacing: 1.5px;
   font-family: "Lato", sans-serif;
   text-align: center;
+  margin: 2rem 0;
 }
 
 img.loader {

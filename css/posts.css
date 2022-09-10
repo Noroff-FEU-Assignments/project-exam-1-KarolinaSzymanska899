@@ -2,11 +2,7 @@ div.posts-container a.post-card p {
   display: none;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
+.main,
 div.posts-container,
 a.post-card {
   display: flex;
@@ -40,7 +36,14 @@ div.posts-container a.post-card figure img {
 }
 
 @media only screen and (min-width: 1024px) {
-  div.posts-container a.post-card figure img {
-    width: 70%;
+  div.posts-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+  }
+
+  a.post-card {
+    width: 100%;
   }
 }
