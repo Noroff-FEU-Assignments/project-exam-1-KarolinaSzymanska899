@@ -5,7 +5,7 @@ export function renderPosts(postsToRender) {
   postsToRender.forEach(function (post) {
     postsContainer.innerHTML += `<a class="post-card" href="details.html?id=${post.id}">
                                   ${post.content.rendered}
-                                  <div>${post.title.rendered}</div>
+                                  <div class="title">${post.title.rendered}</div>
                                 </a>`;
   });
 }
