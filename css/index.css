@@ -17,3 +17,11 @@
 .main section {
   margin-bottom: 1rem;
 }
+
+h2 {
+  text-align: center;
+}
+
+.main section img {
+  width: 100%;
+}
