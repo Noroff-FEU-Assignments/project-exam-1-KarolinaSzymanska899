@@ -1,9 +1,11 @@
 import { renderPosts } from "./ui/renderPosts.js";
+import { displayMorePosts } from "./ui/displayMorePosts.js";
 /*import { searchPosts } from "./ui/searchPosts.js";*/
 import { displayMessage } from "./ui/displayMessage.js";
 
-const url =
-  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?_embed";
+let url =
+  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?per_page=10";
+const button = document.querySelector("#show-more-posts");
 
 async function getPosts() {
   try {
@@ -11,6 +13,8 @@ async function getPosts() {
     const results = await response.json();
 
     renderPosts(results);
+
+    button.addEventListener = ("click", displayMorePosts);
   } catch (error) {
     console.log(error);
     displayMessage(
