@@ -14,7 +14,7 @@ img.toggle-btn {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   width: 300px;
   height: 100%;
   background: var(--text-primary);
@@ -46,6 +46,7 @@ img.toggle-btn {
   }
 
   .nav {
+    position: static;
     width: 100%;
     height: auto;
     left: 0;
