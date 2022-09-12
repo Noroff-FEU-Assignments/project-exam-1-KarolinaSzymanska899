@@ -1,8 +1,6 @@
 import { displayMessage } from "./ui/displayMessage.js";
 
 // variables
-const url =
-  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts/" + id;
 const detailsContainer = document.querySelector("#details-container");
 const modalContainer = document.querySelector("#myModal");
 const modalContent = document.querySelector("#modal-img");
@@ -17,6 +15,9 @@ const id = params.get("id");
 console.log(id);
 
 // fetches details of a post
+const url =
+  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts/" + id;
+
 async function getPost() {
   try {
     const response = await fetch(url);
