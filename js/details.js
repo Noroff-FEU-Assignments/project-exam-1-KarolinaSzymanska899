@@ -2,6 +2,7 @@ import { displayMessage } from "./ui/displayMessage.js";
 
 // variables
 const detailsContainer = document.querySelector("#details-container");
+const modalContainer = document.querySelector("#myModal");
 const modalContent = document.querySelector("#modal-img");
 const modalImg = document.querySelector("div#myModal div#modal-img figure img");
 const span = document.querySelector("#close");
@@ -31,6 +32,12 @@ async function getPost() {
       "Ops something went wrong. We will solve the issue ASAP 👩🏼‍🍳 🍵",
       "#details-container"
     );
+  } finally {
+    const img = document.querySelector("div#details-container figure img");
+
+    img.addEventListener("click", (e) => {
+      modalContainer.style.display = "block";
+    });
   }
 }
 
@@ -46,16 +53,6 @@ function createHtml(details) {
 function fetchModalContent(details) {
   modalContent.innerHTML = `${details.content.rendered}`;
 }
-
-// displays modal
-window.addEventListener("load", () => {
-  const img = document.querySelector("div#details-container figure img");
-
-  img.addEventListener("click", (e) => {
-    const modalContainer = document.querySelector("#myModal");
-    modalContainer.style.display = "block";
-  });
-});
 
 // the two that close modal
 span.onclick = function () {
