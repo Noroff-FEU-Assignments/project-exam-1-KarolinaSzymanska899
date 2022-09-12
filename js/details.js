@@ -2,9 +2,7 @@ import { displayMessage } from "./ui/displayMessage.js";
 
 // variables
 const detailsContainer = document.querySelector("#details-container");
-const modalContainer = document.querySelector("#myModal");
 const modalContent = document.querySelector("#modal-img");
-const img = document.querySelector("div#details-container figure img");
 const modalImg = document.querySelector("div#myModal div#modal-img figure img");
 const span = document.querySelector("#close");
 
@@ -50,9 +48,14 @@ function fetchModalContent(details) {
 }
 
 // displays modal
-img.onclick = function () {
-  modalContainer.style.display = "block";
-};
+window.addEventListener("load", () => {
+  const img = document.querySelector("div#details-container figure img");
+
+  img.addEventListener("click", (e) => {
+    const modalContainer = document.querySelector("#myModal");
+    modalContainer.style.display = "block";
+  });
+});
 
 // the two that close modal
 span.onclick = function () {
