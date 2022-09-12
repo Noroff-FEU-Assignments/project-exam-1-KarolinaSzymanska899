@@ -50,17 +50,18 @@ function createHtml(details) {
 }
 
 // fetches modal's content
-function fetchModalContent(details) {
-  modalContent.innerHTML = `${details.content.rendered}`;
+function fetchModalContent() {
+  const img = document.querySelector("div#details-container figure img");
+  modalContent.innerHTML = `<img src="${img.src}"/>`;
 }
 
 // the two that close modal
-span.onclick = function () {
+span.addEventListener("click", function () {
   modalContainer.style.display = "none";
-};
+});
 
-window.onclick = function (event) {
+window.addEventListener("click", function (event) {
   if (event.target === modalContainer) {
     modalContainer.style.display = "none";
   }
-};
+});
