@@ -1,15 +1,20 @@
 import { displayMessage } from "./ui/displayMessage.js";
 
+// variables
+const url =
+  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts/" + id;
 const detailsContainer = document.querySelector("#details-container");
+const modalContainer = document.querySelector("#myModal");
+const modalContent = document.querySelector("#modal-img");
+const img = document.querySelector("div#details-container figure img");
+const modalImg = document.querySelector("div#myModal div#modal-img figure img");
+const span = document.querySelector("#close");
 
 // retrieving parameters from the query string
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 console.log(id);
-
-const url =
-  "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts/" + id;
 
 // fetches details of a post
 async function getPost() {
@@ -19,6 +24,7 @@ async function getPost() {
     console.log(details);
 
     createHtml(details);
+    fetchModalContent(details);
   } catch (error) {
     console.log(error);
     displayMessage(
@@ -31,14 +37,29 @@ async function getPost() {
 
 getPost();
 
+// creates details of a post
 function createHtml(details) {
   detailsContainer.innerHTML = `<h1 class="title">-- ${details.title.rendered} --</h1>
                               ${details.content.rendered}`;
 }
 
-/*
-dzialalo:
-detailsContainer.innerHTML = details.content.rendered;
+// fetches modal's content
+function fetchModalContent(details) {
+  modalContent.innerHTML = `${details.content.rendered}`;
+}
 
-`<div >${details.content.rendered}</div>`;
-*/
+// displays modal
+img.onclick = function () {
+  modalContainer.style.display = "block";
+};
+
+// the two that close modal
+span.onclick = function () {
+  modalContainer.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target === modalContainer) {
+    modalContainer.style.display = "none";
+  }
+};

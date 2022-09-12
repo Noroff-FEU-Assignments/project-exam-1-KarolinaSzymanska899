@@ -12,10 +12,74 @@ div.details-container {
 div.details-container figure img {
   width: 100%;
   height: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+div.details-container figure img:hover {
+  opacity: 0.7;
 }
 
 .main div.details-container p {
   margin-bottom: 1rem;
+}
+
+/* Modal */
+
+div.modal div.modal-content p {
+  display: none;
+}
+
+.myModal {
+  display: none;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+div.modal div.modal-img figure img {
+  margin: auto;
+  display: block;
+  width: 80%;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {

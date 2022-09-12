@@ -23,6 +23,8 @@ async function getPosts() {
 
 getPosts();
 
+// shows more posts
+
 const button = document.querySelector("#show-more-posts");
 
 button.onclick = async function () {
