@@ -9,7 +9,7 @@ async function getPosts() {
   try {
     const response = await fetch(url);
     const results = await response.json();
-
+    document.querySelector(".loader").style.display = "none";
     renderPosts(results);
   } catch (error) {
     console.log(error);
@@ -40,7 +40,6 @@ button.onclick = async function () {
     const resp = await fetch(allPostsUrl);
     const res = await resp.json();
 
-    document.querySelector(".loader").style.display = "none";
     renderPosts(res);
   } catch (error) {
     console.log(error);
