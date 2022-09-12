@@ -27,7 +27,7 @@ getPosts();
 
 const button = document.querySelector("#show-more-posts");
 
-button.onclick = async function () {
+button.addEventListener("click", async function () {
   console.log("function active when clicking the button");
   button.innerHTML = "No more posts to show";
   button.style.backgroundColor = "#2f3133";
@@ -49,4 +49,4 @@ button.onclick = async function () {
       "#posts-container"
     );
   }
-};
+});
