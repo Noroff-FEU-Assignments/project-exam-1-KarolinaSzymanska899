@@ -40,6 +40,7 @@ button.onclick = async function () {
     const resp = await fetch(allPostsUrl);
     const res = await resp.json();
 
+    document.querySelector(".loader").style.display = "none";
     renderPosts(res);
   } catch (error) {
     console.log(error);
