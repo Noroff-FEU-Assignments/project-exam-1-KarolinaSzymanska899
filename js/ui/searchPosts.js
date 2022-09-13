@@ -1,4 +1,4 @@
-import { renderPosts } from "./renderPosts";
+import { renderPosts } from "./renderPosts.js";
 
 export function searchPosts() {
   const searchButton = document.querySelector("#search-button");
