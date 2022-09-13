@@ -56,12 +56,10 @@ function fetchModalContent() {
 }
 
 // the two that close modal
-span.addEventListener("click", function () {
+document.querySelector("#myModal").addEventListener("click", function (event) {
   modalContainer.style.display = "none";
 });
 
-window.addEventListener("click", function (event) {
-  if (event.target === modalContainer) {
-    modalContainer.style.display = "none";
-  }
+document.querySelector("#modal-img").addEventListener("click", (e) => {
+  e.stopPropagation();
 });
