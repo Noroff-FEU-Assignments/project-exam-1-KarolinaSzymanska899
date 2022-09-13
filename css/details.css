@@ -42,7 +42,18 @@ div.modal div.modal-content p {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-div.modal div.modal-img figure img {
+#modal-img {
+  position: absolute;
+  max-width: 70%;
+  max-height: 70%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+div.modal figure img {
   margin: auto;
   display: block;
   width: 80%;
@@ -71,6 +82,7 @@ div.modal div.modal-img figure img {
 }
 
 .close {
+  display: block;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
