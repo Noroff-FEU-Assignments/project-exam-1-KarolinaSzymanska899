@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,6 +7,12 @@
   background: var(--text-primary);
   padding: 2rem 0;
   margin-top: 7rem;
+}
+
+.footer div.footer-arrow {
+  position: absolute;
+  top: 30px;
+  right: 60px;
 }
 
 .footer div.footer-text,
