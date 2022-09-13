@@ -21,12 +21,6 @@ async function getPosts() {
       "Ops something went wrong. We will solve the issue ASAP 👩🏼‍🍳 🍵",
       "#posts-container"
     );
-  } finally {
-    const img = document.querySelector("div#details-container figure img");
-
-    img.addEventListener("click", (e) => {
-      modalContainer.style.display = "block";
-    });
   }
 }
 
