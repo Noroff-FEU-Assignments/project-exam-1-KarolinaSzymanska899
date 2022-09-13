@@ -1,5 +1,5 @@
 import { renderPosts } from "./ui/renderPosts.js";
-/*import { searchPosts } from "./ui/searchPosts.js";*/
+import { searchPosts } from "./ui/searchPosts.js";
 import { displayMessage } from "./ui/displayMessage.js";
 
 const url =
@@ -11,6 +11,7 @@ async function getPosts() {
     const results = await response.json();
     document.querySelector(".loader").style.display = "none";
     renderPosts(results);
+    searchPosts(newUrl);
   } catch (error) {
     console.log(error);
     displayMessage(
@@ -18,6 +19,12 @@ async function getPosts() {
       "Ops something went wrong. We will solve the issue ASAP 👩🏼‍🍳 🍵",
       "#posts-container"
     );
+  } finally {
+    const img = document.querySelector("div#details-container figure img");
+
+    img.addEventListener("click", (e) => {
+      modalContainer.style.display = "block";
+    });
   }
 }
 
@@ -50,3 +57,14 @@ button.addEventListener("click", async function () {
     );
   }
 });
+
+// search do poprawienia
+
+import { renderPosts } from "./renderPosts.js";
+
+export function searchPosts() {
+  location.href = "../posts.html";
+
+  postsContainer.innerHTML = "";
+  renderPosts(newUrl);
+}
