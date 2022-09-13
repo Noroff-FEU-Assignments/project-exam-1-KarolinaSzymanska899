@@ -52,7 +52,7 @@ function createHtml(details) {
 // fetches modal's content
 function fetchModalContent() {
   const img = document.querySelector("div#details-container figure img");
-  modalContent.innerHTML = `<img src="${img.src}"/>`;
+  modalContent.src = img.src;
 }
 
 // the two that close modal
