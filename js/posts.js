@@ -1,17 +1,20 @@
 import { renderPosts } from "./ui/renderPosts.js";
-import { searchPosts } from "./ui/searchPosts.js";
 import { displayMessage } from "./ui/displayMessage.js";
 
+// variables
+const searchButton = document.querySelector("#search-button");
+const searchInput = document.querySelector("#search-input").value;
+const button = document.querySelector("#show-more-posts");
 const url =
   "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?per_page=10";
 
+// gets posts
 async function getPosts() {
   try {
     const response = await fetch(url);
     const results = await response.json();
     document.querySelector(".loader").style.display = "none";
     renderPosts(results);
-    searchPosts(newUrl);
   } catch (error) {
     console.log(error);
     displayMessage(
@@ -31,11 +34,7 @@ async function getPosts() {
 getPosts();
 
 // shows more posts
-
-const button = document.querySelector("#show-more-posts");
-
 button.addEventListener("click", async function () {
-  console.log("function active when clicking the button");
   button.innerHTML = "No more posts to show";
   button.style.backgroundColor = "#2f3133";
   button.style.cursor = "default";
@@ -58,13 +57,27 @@ button.addEventListener("click", async function () {
   }
 });
 
-// search do poprawienia
+// displays posts with a searched phrase
 
-import { renderPosts } from "./renderPosts.js";
+searchButton.addEventListener("click", function () {
+  console.log("element selected correctly");
+  /* jesli jestem np na about.html, to chce przekierowac na posts.html: */
+  window.location.href = "../posts.html";
 
-export function searchPosts() {
-  location.href = "../posts.html";
+  const newUrl =
+    "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?per_page=30" +
+    `?search=${searchInput}`;
+  try {
+    const resp = fetch(newUrl);
+    const searchedPosts = resp.json();
 
-  postsContainer.innerHTML = "";
-  renderPosts(newUrl);
-}
+    renderPosts(searchedPosts);
+  } catch (error) {
+    console.log(error);
+    displayMessage(
+      "error",
+      "Ops something went wrong. We will solve the issue ASAP 👩🏼‍🍳 🍵",
+      "#posts-container"
+    );
+  }
+});

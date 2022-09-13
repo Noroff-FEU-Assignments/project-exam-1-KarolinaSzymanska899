@@ -1,5 +1,3 @@
-import { searchPosts } from "./ui/searchPosts.js";
-
 export function createSidebar() {
   const sidebar = document.querySelector("#sidebar");
 
@@ -23,16 +21,3 @@ export function createSidebar() {
                         </div>
                       </div>`;
 }
-
-// search do poprawienia
-
-window.addEventListener("load", () => {
-  const searchButton = document.querySelector("#search-button");
-
-  searchButton.addEventListener("click", (searchPosts) => {
-    const searchInput = document.querySelector("#search-input").value;
-    const newUrl =
-      "https://karolinaszymanska.tech/heidicooks/wp-json/wp/v2/posts?per_page=30" +
-      `?search=${searchInput}`;
-  });
-});
