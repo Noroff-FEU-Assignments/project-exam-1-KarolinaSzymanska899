@@ -16,7 +16,3 @@ export function searchPosts() {
     renderPosts(newUrl);
   };
 }
-
-/* jesli jestem np na about.html, to chce przekierowac na posts.html: 
-window.location.href = "../posts.html";
-*/
