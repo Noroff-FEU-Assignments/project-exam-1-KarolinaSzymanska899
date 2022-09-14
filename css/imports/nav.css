@@ -4,7 +4,6 @@
 
 .body {
   overflow-y: scroll;
-  /*max-height: ;*/
 }
 
 img.toggle-btn {
@@ -67,7 +66,4 @@ img.toggle-btn {
     color: var(--beige);
     transition: color 1s;
   }
-}
-
-@media only screen and (min-width: 1024px) {
 }
