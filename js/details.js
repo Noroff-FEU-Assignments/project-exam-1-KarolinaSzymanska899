@@ -4,8 +4,11 @@ import { displayMessage } from "./ui/displayMessage.js";
 const detailsContainer = document.querySelector("#details-container");
 const modalContainer = document.querySelector("#myModal");
 const modalContent = document.querySelector("#modal-img");
+
+/*
 const modalImg = document.querySelector("div#myModal div#modal-img figure img");
 const span = document.querySelector("#close");
+*/
 
 // retrieving parameters from the query string
 const queryString = document.location.search;
