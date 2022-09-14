@@ -1,5 +1,4 @@
 import { renderPosts } from "./ui/renderPosts.js";
-import { searchPosts } from "./ui/searchPosts.js";
 import { displayMessage } from "./ui/displayMessage.js";
 
 // variables
