@@ -2,7 +2,7 @@ export function createSidebar() {
   const sidebar = document.querySelector("#sidebar");
 
   sidebar.innerHTML = `<a class="logo" href="../index.html">
-                          <img class="logo-img" src="./images/heidicropped.avif" alt="Heidi the blogger smiling"/>
+                          <img class="logo-img" src="../images/heidicropped.avif" alt="Heidi the blogger smiling"/>
                           <h2 class="logo-text">HEIDI COOKS</h2>
                       </a>
 
