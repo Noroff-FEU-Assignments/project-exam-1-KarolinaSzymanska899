@@ -1,4 +1,4 @@
-# Live Rock - Project Exam 1
+# Heidi Cooks - Project Exam 1
 
 <p align="center">
   <img src="./images/heidicooks.jpg" alt="Live Rock homepage" />
